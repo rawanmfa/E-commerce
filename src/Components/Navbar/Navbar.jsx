@@ -8,7 +8,7 @@ import useCart from '../../Hooks/useCart';
 export default function Navbar() {
 
   const [clicked, setClicked] = useState(false);
-  let navigate = useNavigate();
+  let navigate = useNavigate(); 
   let { userData, setUserData } = useContext(userContext);
   let { cart } = useContext(cartContext);
   useCart();
@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return <>
 
-    <div className=' bg-gray-200 py-2 lg:fixed top-0 inset-x-0 z-[999]'>
+    <div className=' bg-zinc-300 py-6 lg:fixed top-0 inset-x-0 z-[999]'>
       <div className={` w-[95%] mx-auto flex justify-between ${clicked ? '' : 'items-center'}`}>
         <div className={`${clicked ? '' : 'items-center'} flex space-x-3`}>
           <button onClick={() => clicked ? setClicked(false) : setClicked(true)} data-collapse-toggle="navbar-hamburger" type="button" className="lg:hidden inline-flex items-center justify-center w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-hamburger" aria-expanded="false">
