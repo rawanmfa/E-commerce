@@ -10,7 +10,7 @@ export default function AllOrders() {
     
   return <>
     
-    <h1 className="text-3xl ">AllOrders</h1>
+    <h1 className="text-3xl mt-8">AllOrders</h1>
   
   </>
 }

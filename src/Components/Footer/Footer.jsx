@@ -15,7 +15,7 @@ export default function Footer() {
           <div className=" w-3/4">
             <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 " placeholder="Email ..." />
           </div>
-          <button className=' btn w-1/5 bg-main rounded text-white py-2'>Share App Link</button>
+          <button className=' btn w-1/5 bg-main rounded text-xs md:text-sm lg:text-base text-white py-2'>Share App Link</button>
         </form>
         <div className=' border-y-2 border-gray-300 py-4 flex justify-between text-gray-700'>
           <div>

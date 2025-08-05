@@ -52,8 +52,8 @@ export default function WishList() {
                 <td className="px-6 py-4 text-gray-900 ">
                   {product.price} EGP
                 </td>
-                <td className="px-6 py-4 space-x-5">
-                  <button onClick={() => addProductToCart(product._id)} className=' btn bg-main rounded text-white py-1 px-4'>Add To Cart</button>
+                <td className="px-6 py-4 lg:space-x-5 space-y-2 lg:space-y-0">
+                  <button onClick={() => addProductToCart(product._id)} className=' btn bg-main rounded text-xs md:text-sm lg:text-base text-white py-1 px-4'>Add To Cart</button>
                   {removeLoadingWishlist ? <i className="fa-solid fa-spinner fa-spin"></i> :
                     <button onClick={() => deleteProductFromWishlist(product._id)} className="font-medium text-red-600 hover:underline">Remove</button>
                   }
