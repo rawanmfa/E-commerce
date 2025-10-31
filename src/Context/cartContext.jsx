@@ -64,7 +64,7 @@ export default function CartContextProvider({children}) {
     }
     async function checkOut(shippingAddress) {
         try {
-            let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cart.data._id}?url=https://e-commerce-at-route.netlify.app`, {
+            let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cart.data._id}?url=http://localhost:5173`, {
                 shippingAddress
             }, {
                 headers:{
