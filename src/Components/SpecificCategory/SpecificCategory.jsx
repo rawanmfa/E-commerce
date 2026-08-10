@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import Slider from "react-slick";
 import { cartContext } from "../../Context/cartContext";
 import { Link } from "react-router-dom";
 import { wishlistContext } from "../../Context/wishlistContext";
+import SliderImport from "react-slick";
+
+const Slider = SliderImport.default ?? SliderImport;
 
 export default function SpecificCategory({ specificCatId }) {
 

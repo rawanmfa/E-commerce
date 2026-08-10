@@ -1,7 +1,8 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import Slider from "react-slick";
 import useCategory from '../../Hooks/useCategory';
+import SliderImport from "react-slick";
+
+const Slider = SliderImport.default ?? SliderImport;
 
 export default function CategorySlider() {
 

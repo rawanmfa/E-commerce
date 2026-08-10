@@ -1,8 +1,10 @@
 import React from 'react'
-import Slider from "react-slick";
 import slider1 from '../../assets/images/slider-image-1.jpeg'
 import slider2 from '../../assets/images/slider-image-2.jpeg'
 import slider3 from '../../assets/images/slider-image-3.jpeg'
+import SliderImport from "react-slick";
+
+const Slider = SliderImport.default ?? SliderImport;
 
 export default function MainSlider() {
 

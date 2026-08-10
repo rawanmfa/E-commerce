@@ -1,11 +1,13 @@
 import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import Slider from "react-slick";
 import Loader from '../Loader/Loader';
 import { wishlistContext } from '../../Context/wishlistContext';
 import { cartContext } from '../../Context/cartContext';
 import SpecificCategory from '../SpecificCategory/SpecificCategory';
+import SliderImport from "react-slick";
+
+const Slider = SliderImport.default ?? SliderImport;
 
 export default function ProductDetails() {
 
