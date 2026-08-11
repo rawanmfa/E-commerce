@@ -18,7 +18,7 @@ export default function Login() {
       let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/auth/signin`, values);
       localStorage.setItem('userToken', data.token);
       setUserData(data.token)
-      navigate('/home')
+      navigate('/E-commerce/home')
     } catch (error) {
       setApiError(error.response.data.message);
       setLoading(false)
@@ -61,7 +61,7 @@ export default function Login() {
         <div className=' flex justify-evenly items-center'>
           {loading ? <button type="button" className="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm  sm:w-auto px-8 py-2.5 text-center dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-800"><i className=' fas fa-spinner fa-spin-pulse'></i></button>
             : <button type="submit" className="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm  sm:w-auto px-8 py-2.5 text-center dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-800">Login</button>}
-          <Link to='/forgetpass' className=' text-xs hover:underline'>Forget Password</Link>
+          <Link to='/E-commerce/forgetpass' className=' text-xs hover:underline'>Forget Password</Link>
         </div>
       </form>
     </div>

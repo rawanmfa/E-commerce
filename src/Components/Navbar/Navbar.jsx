@@ -15,7 +15,7 @@ export default function Navbar() {
   function logout() {
     localStorage.removeItem('userToken')
     setUserData(null);
-    navigate('/login')
+    navigate('/E-commerce/login')
   }
 
   return <>
@@ -32,29 +32,29 @@ export default function Navbar() {
           <div className={`lg:flex space-x-3 items-center ${clicked ? 'pt-2' : ''}`} >
             <img src={freshCartLogo} width={120} alt="" />
             {userData && <ul className={`${clicked ? '' : 'hidden lg:flex'} text-gray-500 lg:flex pt-2 lg:pt-0 lg:space-y-0 space-y-1 lg:space-x-3`} >
-              <li><NavLink to='home'>Home</NavLink></li>
-              <li><NavLink to='productpage'>Products</NavLink></li>
-              <li><NavLink to='categories'>Categories</NavLink></li>
-              <li><NavLink to='brands'>Brands</NavLink></li>
-              <li><NavLink to='wishlist'>Wishlist</NavLink></li>
-              <li><NavLink to='cart'>Cart<div className=' inline-block text-main ms-1'><span>{cart ? cart.numOfCartItems : 0}</span><i className="fa-solid fa-cart-shopping text-main mx-1"></i></div></NavLink></li>
+              <li><NavLink to='/E-commerce/home'>Home</NavLink></li>
+              <li><NavLink to='/E-commerce/productpage'>Products</NavLink></li>
+              <li><NavLink to='/E-commerce/categories'>Categories</NavLink></li>
+              <li><NavLink to='/E-commerce/brands'>Brands</NavLink></li>
+              <li><NavLink to='/E-commerce/wishlist'>Wishlist</NavLink></li>
+              <li><NavLink to='/E-commerce/cart'>Cart<div className=' inline-block text-main ms-1'><span>{cart ? cart.numOfCartItems : 0}</span><i className="fa-solid fa-cart-shopping text-main mx-1"></i></div></NavLink></li>
             </ul>
             }
           </div>
         </div>
         <div className={` flex space-x-3 ${clicked ? 'pt-2' : ''}`} >
           <ul className=' flex space-x-3'>
-            <li><NavLink to=''><i className='fab fa-facebook-f'></i></NavLink></li>
-            <li><NavLink to=''><i className='fab fa-linkedin-in'></i></NavLink></li>
-            <li><NavLink to=''><i className='fab fa-youtube'></i></NavLink></li>
-            <li><NavLink to=''><i className='fab fa-twitter'></i></NavLink></li>
-            <li><NavLink to=''><i className='fab fa-instagram'></i></NavLink></li>
+            <li><NavLink to='/E-commerce/home'><i className='fab fa-facebook-f'></i></NavLink></li>
+            <li><NavLink to='/E-commerce/home'><i className='fab fa-linkedin-in'></i></NavLink></li>
+            <li><NavLink to='/E-commerce/home'><i className='fab fa-youtube'></i></NavLink></li>
+            <li><NavLink to='/E-commerce/home'><i className='fab fa-twitter'></i></NavLink></li>
+            <li><NavLink to='/E-commerce/home'><i className='fab fa-instagram'></i></NavLink></li>
           </ul>
           <ul className=' flex space-x-3 text-gray-500'>
             {userData ? <li className=' cursor-pointer' onClick={() => logout()}><span>logout</span></li> :
               <>
-                <li><NavLink to=''>Register</NavLink></li>
-                <li><NavLink to='login'>Login</NavLink></li>
+                <li><NavLink to='/E-commerce/'>Register</NavLink></li>
+                <li><NavLink to='/E-commerce/login'>Login</NavLink></li>
               </>}
           </ul>
         </div>

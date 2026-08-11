@@ -79,7 +79,7 @@ export default function Cart() {
         </div>
       </div>
       <div className=' flex justify-center items-center mb-8'>
-        <Link to='/checkout' className=' bg-main py-3 px-7 text-sm lg:text-base text-white rounded-lg'>Check out</Link>
+        <Link to='/E-commerce/checkout' className=' bg-main py-3 px-7 text-sm lg:text-base text-white rounded-lg'>Check out</Link>
       </div>
     </div>: <div className=' text-2xl py-16 text-center text-gray-400'>cart is empty</div>}
 

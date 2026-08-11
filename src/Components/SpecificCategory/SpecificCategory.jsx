@@ -61,7 +61,7 @@ export default function SpecificCategory({ specificCatId }) {
             <Slider {...settings}>
                 {specificCat?.map((cate, index) => <div key={index} className=" product hover:border-0 relative">
                 <div onClick={() => { addWishlist(cate._id) }} className=' absolute bottom-24 right-3 my-icon w-[35px] h-[35px] flex items-center justify-center cursor-pointer rounded-full'><i className="fa-regular fa-heart"></i></div>
-                    <Link to={`/productdetails/${cate._id}`}> {/* it doesn't go to the product details immediatly i have to refresh the page from crome for it so the data shows*/}
+                    <Link to={`/E-commerce/productdetails/${cate._id}`}> {/* it doesn't go to the product details immediatly i have to refresh the page from crome for it so the data shows*/}
                         <img src={cate.imageCover} alt={cate.title} />
                         <h2 className=" mx-4 mt-2">{cate.title.split(' ').slice(0, 2).join(' ')}</h2>
                         <div className=" flex justify-between items-center mx-4">

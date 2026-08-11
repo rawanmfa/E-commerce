@@ -13,7 +13,7 @@ export default function VerfyPass() {
       try {
         setLoading(true)
         let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/auth/verifyResetCode`, values);
-        navigate('/changepass')
+        navigate('/E-commerce/changepass')
       } catch (error) {
         setApiError(error.response.data.message);
         setLoading(false)

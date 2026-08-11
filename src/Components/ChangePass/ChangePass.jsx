@@ -18,7 +18,7 @@ export default function ChangePass() {
       let { data } = await axios.put(`https://ecommerce.routemisr.com/api/v1/auth/resetPassword`, values);
       localStorage.setItem('userToken', data.token);
       setUserData(data.token)
-      navigate('/home')
+      navigate('/E-commerce/home')
     } catch (error) {
       setApiError(error.response.data.message);
       setLoading(false)

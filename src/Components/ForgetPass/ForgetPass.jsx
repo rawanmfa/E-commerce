@@ -14,7 +14,7 @@ export default function ForgetPass() {
       try {
         setLoading(true)
         let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/auth/forgotPasswords`, values);
-        navigate('/verfypass')
+        navigate('/E-commerce/verfypass')
       } catch (error) {
         setApiError(error.response.data.message);
         setLoading(false)

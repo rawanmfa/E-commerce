@@ -21,7 +21,7 @@ export default function Products({ product }) {
 
     <div className="w-1/2 md:w-1/4 lg:w-1/6 product px-2 py-2 rounded relative">
       <div onClick={() => { addWishlist(product.id) }} className=' absolute bottom-32 right-3 my-icon w-[35px] h-[35px] flex items-center justify-center cursor-pointer rounded-full'><i className="fa-regular fa-heart"></i></div>
-      <Link to={`/productdetails/${product.id}`}>
+      <Link to={`/E-commerce/productdetails/${product.id}`}>
         <img src={product.imageCover} className=' w-full' alt={product.title} />
         <h2 className=' text-main text-sm'>{product.category.name}</h2>
         <h2>{product.title.split(' ').slice(0, 2).join(' ')}</h2>

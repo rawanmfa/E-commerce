@@ -1,5 +1,5 @@
 import './App.css'
-import { createHashRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Components/Layout/Layout'
 import Home from './Components/Home/Home'
 import Cart from './Components/Cart/Cart'
@@ -27,25 +27,25 @@ import VerfyPass from './Components/VerfyPass/VerfyPass'
 import ChangePass from './Components/ChangePass/ChangePass'
 
 
-let routers = createHashRouter([{
+let routers = createBrowserRouter([{
   path: '', element: <Layout />, children: [
-    { path: 'home', element: <ProtectedRoute><Home /></ProtectedRoute> },
-    { path: 'cart', element: <ProtectedRoute><Cart /></ProtectedRoute> },
-    { path: 'products', element: <ProtectedRoute><Products /></ProtectedRoute> },
-    { path: 'productpage', element: <ProtectedRoute><ProductPage /></ProtectedRoute> },
-    { path: 'productdetails/:id', element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },
-    { path: 'categories', element: <ProtectedRoute><Categories /></ProtectedRoute> },
-    { path: 'brands', element: <ProtectedRoute><Brands /></ProtectedRoute> },
-    { path: 'checkout', element: <ProtectedRoute><CheckOut /></ProtectedRoute> },
-    { path: 'allorders', element: <ProtectedRoute><AllOrders /></ProtectedRoute> },
-    { path: 'navbar', element: <ProtectedRoute><Navbar /></ProtectedRoute> },
-    { path: 'footer', element: <ProtectedRoute><Footer /></ProtectedRoute> },
-    { path: 'wishlist', element: <ProtectedRoute><WishList /></ProtectedRoute> },
-    { index: true, element: <Register /> },
-    { path: 'login', element: <Login /> },
-    { path: 'forgetpass', element: <ForgetPass /> },
-    { path: 'verfypass', element: <VerfyPass /> },
-    { path: 'changepass', element: <ChangePass /> },
+    { path: '/E-commerce/home', element: <ProtectedRoute><Home /></ProtectedRoute> },
+    { path: '/E-commerce/cart', element: <ProtectedRoute><Cart /></ProtectedRoute> },
+    { path: '/E-commerce/products', element: <ProtectedRoute><Products /></ProtectedRoute> },
+    { path: '/E-commerce/productpage', element: <ProtectedRoute><ProductPage /></ProtectedRoute> },
+    { path: '/E-commerce/productdetails/:id', element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },
+    { path: '/E-commerce/categories', element: <ProtectedRoute><Categories /></ProtectedRoute> },
+    { path: '/E-commerce/brands', element: <ProtectedRoute><Brands /></ProtectedRoute> },
+    { path: '/E-commerce/checkout', element: <ProtectedRoute><CheckOut /></ProtectedRoute> },
+    { path: '/E-commerce/allorders', element: <ProtectedRoute><AllOrders /></ProtectedRoute> },
+    { path: '/E-commerce/navbar', element: <ProtectedRoute><Navbar /></ProtectedRoute> },
+    { path: '/E-commerce/footer', element: <ProtectedRoute><Footer /></ProtectedRoute> },
+    { path: '/E-commerce/wishlist', element: <ProtectedRoute><WishList /></ProtectedRoute> },
+    { path: '/E-commerce/', element: <Register /> },
+    { path: '/E-commerce/login', element: <Login /> },
+    { path: '/E-commerce/forgetpass', element: <ForgetPass /> },
+    { path: '/E-commerce/verfypass', element: <VerfyPass /> },
+    { path: '/E-commerce/changepass', element: <ChangePass /> },
     { path: '*', element: <Notfound /> }
   ]
 }])
