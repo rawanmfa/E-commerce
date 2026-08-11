@@ -1,5 +1,5 @@
 import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Components/Layout/Layout'
 import Home from './Components/Home/Home'
 import Cart from './Components/Cart/Cart'
@@ -27,7 +27,7 @@ import VerfyPass from './Components/VerfyPass/VerfyPass'
 import ChangePass from './Components/ChangePass/ChangePass'
 
 
-let routers = createBrowserRouter([{
+let routers = createHashRouter([{
   path: '', element: <Layout />, children: [
     { path: 'home', element: <ProtectedRoute><Home /></ProtectedRoute> },
     { path: 'cart', element: <ProtectedRoute><Cart /></ProtectedRoute> },
